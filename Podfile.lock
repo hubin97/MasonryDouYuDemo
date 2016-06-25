@@ -1,12 +1,21 @@
 PODS:
-  - Masonry (1.0.0)
+  - Masonry (1.0.1)
+  - MJExtension (3.0.10)
+  - MJRefresh (3.1.9)
+  - MJToast (0.1.0)
 
 DEPENDENCIES:
   - Masonry (~> 1.0.0)
+  - MJExtension (~> 3.0.10)
+  - MJRefresh (~> 3.1.0)
+  - MJToast (~> 0.1.0)
 
 SPEC CHECKSUMS:
-  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
+  MJToast: 25a7696ead2de621b700c20ed93b87e4db3712af
 
-PODFILE CHECKSUM: a3a89d20b8be2f3958160278c35c1888b615ec2d
+PODFILE CHECKSUM: e7cecafeef4996bc96c5dbd794b9db20e4c52ae1
 
 COCOAPODS: 1.0.0

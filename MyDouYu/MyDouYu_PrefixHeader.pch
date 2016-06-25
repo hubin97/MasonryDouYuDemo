@@ -45,8 +45,9 @@
 
 
 //online 直播页
-#define OnlineURL @"http://www.douyutv.com/api/v1/game?aid=ios&auth=3f252c3294b31a61fbdd890a45609549&client_sys=ios&time=1446450360"
-
+#define OnlineURL @"http://www.douyutv.com/api/v1/live?aid=ios&auth=b317487532542c2f8200f374f3153da2&client_sys=ios&limit=20"
+#define OnlineURL_a @"0"
+#define OnlineURL_b @"time=1446684180"
 
 
 #endif /* MyDouYu_PrefixHeader_pch */
