@@ -20,6 +20,8 @@
 		1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576091D1E2CFC00136838 /* OnlineViewController.m */; };
 		1FA5760D1D1E2D0A00136838 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5760C1D1E2D0A00136838 /* MineController.m */; };
 		1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */; };
+		1FA576171D1E42F700136838 /* MineFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576161D1E42F700136838 /* MineFirstCell.m */; };
+		1FA5761A1D1E625200136838 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576191D1E625100136838 /* BaseViewController.m */; };
 		B40B5CCFA95811EC6A27F4B2 /* libPods-MyDouYu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,10 @@
 		1FA5760C1D1E2D0A00136838 /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
 		1FA5760E1D1E2DFE00136838 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		1FA576151D1E42F700136838 /* MineFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFirstCell.h; sourceTree = "<group>"; };
+		1FA576161D1E42F700136838 /* MineFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFirstCell.m; sourceTree = "<group>"; };
+		1FA576181D1E625100136838 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		1FA576191D1E625100136838 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		256BC3C7559698A72174B308 /* Pods-MyDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.release.xcconfig"; sourceTree = "<group>"; };
 		71BA5C1CB50BFAC1A44FC666 /* Pods-MyDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.debug.xcconfig"; sourceTree = "<group>"; };
 		CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDouYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,18 +133,16 @@
 				046418D51D19460A00D338CC /* MyDouYu_PrefixHeader.pch */,
 				1FA5760E1D1E2DFE00136838 /* BaseNavigationController.h */,
 				1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */,
-				046418A51D19446D00D338CC /* AppDelegate.h */,
-				046418A61D19446D00D338CC /* AppDelegate.m */,
+				1FA576181D1E625100136838 /* BaseViewController.h */,
+				1FA576191D1E625100136838 /* BaseViewController.m */,
 				046418D61D1947F200D338CC /* BaseTabBarController.h */,
 				046418D71D1947F200D338CC /* BaseTabBarController.m */,
-				1FA576021D1E2CDB00136838 /* RecommendController.h */,
-				1FA576031D1E2CDB00136838 /* RecommendController.m */,
-				1FA576051D1E2CEC00136838 /* ColumnController.h */,
-				1FA576061D1E2CEC00136838 /* ColumnController.m */,
-				1FA576081D1E2CFC00136838 /* OnlineViewController.h */,
-				1FA576091D1E2CFC00136838 /* OnlineViewController.m */,
-				1FA5760B1D1E2D0A00136838 /* MineController.h */,
-				1FA5760C1D1E2D0A00136838 /* MineController.m */,
+				046418A51D19446D00D338CC /* AppDelegate.h */,
+				046418A61D19446D00D338CC /* AppDelegate.m */,
+				1FA576121D1E3A7F00136838 /* 推荐 */,
+				1FA576111D1E3A7000136838 /* 栏目 */,
+				1FA576131D1E3A9600136838 /* 直播 */,
+				1FA576141D1E3A9C00136838 /* 我的 */,
 				046418AB1D19446D00D338CC /* Main.storyboard */,
 				046418AE1D19446D00D338CC /* Assets.xcassets */,
 				046418B01D19446D00D338CC /* LaunchScreen.storyboard */,
@@ -172,6 +176,44 @@
 				046418C91D19446D00D338CC /* Info.plist */,
 			);
 			path = MyDouYuUITests;
+			sourceTree = "<group>";
+		};
+		1FA576111D1E3A7000136838 /* 栏目 */ = {
+			isa = PBXGroup;
+			children = (
+				1FA576051D1E2CEC00136838 /* ColumnController.h */,
+				1FA576061D1E2CEC00136838 /* ColumnController.m */,
+			);
+			name = "栏目";
+			sourceTree = "<group>";
+		};
+		1FA576121D1E3A7F00136838 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				1FA576021D1E2CDB00136838 /* RecommendController.h */,
+				1FA576031D1E2CDB00136838 /* RecommendController.m */,
+			);
+			name = "推荐";
+			sourceTree = "<group>";
+		};
+		1FA576131D1E3A9600136838 /* 直播 */ = {
+			isa = PBXGroup;
+			children = (
+				1FA576081D1E2CFC00136838 /* OnlineViewController.h */,
+				1FA576091D1E2CFC00136838 /* OnlineViewController.m */,
+			);
+			name = "直播";
+			sourceTree = "<group>";
+		};
+		1FA576141D1E3A9C00136838 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5760B1D1E2D0A00136838 /* MineController.h */,
+				1FA5760C1D1E2D0A00136838 /* MineController.m */,
+				1FA576151D1E42F700136838 /* MineFirstCell.h */,
+				1FA576161D1E42F700136838 /* MineFirstCell.m */,
+			);
+			name = "我的";
 			sourceTree = "<group>";
 		};
 		951DFD20782B0CD7D788FF97 /* Frameworks */ = {
@@ -373,12 +415,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				046418D81D1947F200D338CC /* BaseTabBarController.m in Sources */,
+				1FA5761A1D1E625200136838 /* BaseViewController.m in Sources */,
 				1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */,
 				046418A71D19446D00D338CC /* AppDelegate.m in Sources */,
 				1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */,
 				1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */,
 				046418A41D19446D00D338CC /* main.m in Sources */,
 				1FA576071D1E2CEC00136838 /* ColumnController.m in Sources */,
+				1FA576171D1E42F700136838 /* MineFirstCell.m in Sources */,
 				1FA5760D1D1E2D0A00136838 /* MineController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

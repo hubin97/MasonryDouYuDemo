@@ -1,5 +1,5 @@
 //
-//  MineController.h
+//  BaseViewController.h
 //  MyDouYu
 //
 //  Created by Hubin_Huang on 16/6/25.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface MineController : BaseViewController
+@interface BaseViewController : UIViewController
 
 @end
