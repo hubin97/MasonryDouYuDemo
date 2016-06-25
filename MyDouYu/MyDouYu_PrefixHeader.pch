@@ -1,0 +1,22 @@
+//
+//  MyDouYu_PrefixHeader.pch
+//  MyDouYu
+//
+//  Created by Mac on 16/6/21.
+//  Copyright © 2016年 TUTK. All rights reserved.
+//
+
+#ifndef MyDouYu_PrefixHeader_pch
+#define MyDouYu_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Masonry.h"
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define TabBar_T_Color [UIColor colorWithRed:244/255.0 green:89/255.0 blue:27/255.0 alpha:1.0]
+
+
+#endif /* MyDouYu_PrefixHeader_pch */

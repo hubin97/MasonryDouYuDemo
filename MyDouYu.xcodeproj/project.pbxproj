@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		046418A41D19446D00D338CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418A31D19446D00D338CC /* main.m */; };
 		046418A71D19446D00D338CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418A61D19446D00D338CC /* AppDelegate.m */; };
-		046418AA1D19446D00D338CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418A91D19446D00D338CC /* ViewController.m */; };
 		046418AD1D19446D00D338CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046418AB1D19446D00D338CC /* Main.storyboard */; };
 		046418AF1D19446D00D338CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046418AE1D19446D00D338CC /* Assets.xcassets */; };
 		046418B21D19446D00D338CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046418B01D19446D00D338CC /* LaunchScreen.storyboard */; };
 		046418BD1D19446D00D338CC /* MyDouYuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418BC1D19446D00D338CC /* MyDouYuTests.m */; };
 		046418C81D19446D00D338CC /* MyDouYuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418C71D19446D00D338CC /* MyDouYuUITests.m */; };
+		046418D81D1947F200D338CC /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418D71D1947F200D338CC /* BaseTabBarController.m */; };
+		1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576031D1E2CDB00136838 /* RecommendController.m */; };
+		1FA576071D1E2CEC00136838 /* ColumnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576061D1E2CEC00136838 /* ColumnController.m */; };
+		1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576091D1E2CFC00136838 /* OnlineViewController.m */; };
+		1FA5760D1D1E2D0A00136838 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5760C1D1E2D0A00136838 /* MineController.m */; };
+		1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */; };
+		B40B5CCFA95811EC6A27F4B2 /* libPods-MyDouYu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +45,6 @@
 		046418A31D19446D00D338CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		046418A51D19446D00D338CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		046418A61D19446D00D338CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		046418A81D19446D00D338CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		046418A91D19446D00D338CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		046418AC1D19446D00D338CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		046418AE1D19446D00D338CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046418B11D19446D00D338CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,22 @@
 		046418C31D19446D00D338CC /* MyDouYuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDouYuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		046418C71D19446D00D338CC /* MyDouYuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDouYuUITests.m; sourceTree = "<group>"; };
 		046418C91D19446D00D338CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046418D51D19460A00D338CC /* MyDouYu_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDouYu_PrefixHeader.pch; sourceTree = "<group>"; };
+		046418D61D1947F200D338CC /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		046418D71D1947F200D338CC /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		1FA576021D1E2CDB00136838 /* RecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendController.h; sourceTree = "<group>"; };
+		1FA576031D1E2CDB00136838 /* RecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendController.m; sourceTree = "<group>"; };
+		1FA576051D1E2CEC00136838 /* ColumnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnController.h; sourceTree = "<group>"; };
+		1FA576061D1E2CEC00136838 /* ColumnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnController.m; sourceTree = "<group>"; };
+		1FA576081D1E2CFC00136838 /* OnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineViewController.h; sourceTree = "<group>"; };
+		1FA576091D1E2CFC00136838 /* OnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineViewController.m; sourceTree = "<group>"; };
+		1FA5760B1D1E2D0A00136838 /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
+		1FA5760C1D1E2D0A00136838 /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		1FA5760E1D1E2DFE00136838 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		256BC3C7559698A72174B308 /* Pods-MyDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.release.xcconfig"; sourceTree = "<group>"; };
+		71BA5C1CB50BFAC1A44FC666 /* Pods-MyDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.debug.xcconfig"; sourceTree = "<group>"; };
+		CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDouYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40B5CCFA95811EC6A27F4B2 /* libPods-MyDouYu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +106,8 @@
 				046418BB1D19446D00D338CC /* MyDouYuTests */,
 				046418C61D19446D00D338CC /* MyDouYuUITests */,
 				046418A01D19446D00D338CC /* Products */,
+				A4159115C76B2520E7B30533 /* Pods */,
+				951DFD20782B0CD7D788FF97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +124,21 @@
 		046418A11D19446D00D338CC /* MyDouYu */ = {
 			isa = PBXGroup;
 			children = (
+				046418D51D19460A00D338CC /* MyDouYu_PrefixHeader.pch */,
+				1FA5760E1D1E2DFE00136838 /* BaseNavigationController.h */,
+				1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */,
 				046418A51D19446D00D338CC /* AppDelegate.h */,
 				046418A61D19446D00D338CC /* AppDelegate.m */,
-				046418A81D19446D00D338CC /* ViewController.h */,
-				046418A91D19446D00D338CC /* ViewController.m */,
+				046418D61D1947F200D338CC /* BaseTabBarController.h */,
+				046418D71D1947F200D338CC /* BaseTabBarController.m */,
+				1FA576021D1E2CDB00136838 /* RecommendController.h */,
+				1FA576031D1E2CDB00136838 /* RecommendController.m */,
+				1FA576051D1E2CEC00136838 /* ColumnController.h */,
+				1FA576061D1E2CEC00136838 /* ColumnController.m */,
+				1FA576081D1E2CFC00136838 /* OnlineViewController.h */,
+				1FA576091D1E2CFC00136838 /* OnlineViewController.m */,
+				1FA5760B1D1E2D0A00136838 /* MineController.h */,
+				1FA5760C1D1E2D0A00136838 /* MineController.m */,
 				046418AB1D19446D00D338CC /* Main.storyboard */,
 				046418AE1D19446D00D338CC /* Assets.xcassets */,
 				046418B01D19446D00D338CC /* LaunchScreen.storyboard */,
@@ -140,6 +174,23 @@
 			path = MyDouYuUITests;
 			sourceTree = "<group>";
 		};
+		951DFD20782B0CD7D788FF97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4159115C76B2520E7B30533 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71BA5C1CB50BFAC1A44FC666 /* Pods-MyDouYu.debug.xcconfig */,
+				256BC3C7559698A72174B308 /* Pods-MyDouYu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046418CC1D19446D00D338CC /* Build configuration list for PBXNativeTarget "MyDouYu" */;
 			buildPhases = (
+				D0165090C4C698C9E6D8F1DE /* 📦 Check Pods Manifest.lock */,
 				0464189B1D19446D00D338CC /* Sources */,
 				0464189C1D19446D00D338CC /* Frameworks */,
 				0464189D1D19446D00D338CC /* Resources */,
+				55174805EF10661447B80A5C /* 📦 Embed Pods Frameworks */,
+				8E410BD27BB273EDCC1FD6FE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,14 +319,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55174805EF10661447B80A5C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E410BD27BB273EDCC1FD6FE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0165090C4C698C9E6D8F1DE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0464189B1D19446D00D338CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046418AA1D19446D00D338CC /* ViewController.m in Sources */,
+				046418D81D1947F200D338CC /* BaseTabBarController.m in Sources */,
+				1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */,
 				046418A71D19446D00D338CC /* AppDelegate.m in Sources */,
+				1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */,
+				1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */,
 				046418A41D19446D00D338CC /* main.m in Sources */,
+				1FA576071D1E2CEC00136838 /* ColumnController.m in Sources */,
+				1FA5760D1D1E2D0A00136838 /* MineController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,8 +518,10 @@
 		};
 		046418CD1D19446D00D338CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71BA5C1CB50BFAC1A44FC666 /* Pods-MyDouYu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = MyDouYu/MyDouYu_PrefixHeader.pch;
 				INFOPLIST_FILE = MyDouYu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TUTK.MyDouYu;
@@ -422,8 +531,10 @@
 		};
 		046418CE1D19446D00D338CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 256BC3C7559698A72174B308 /* Pods-MyDouYu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = MyDouYu/MyDouYu_PrefixHeader.pch;
 				INFOPLIST_FILE = MyDouYu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TUTK.MyDouYu;
@@ -496,6 +607,7 @@
 				046418CE1D19446D00D338CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		046418CF1D19446D00D338CC /* Build configuration list for PBXNativeTarget "MyDouYuTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +616,7 @@
 				046418D11D19446D00D338CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		046418D21D19446D00D338CC /* Build configuration list for PBXNativeTarget "MyDouYuUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +625,7 @@
 				046418D41D19446D00D338CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
