@@ -18,6 +18,45 @@
 
 #define TabBar_T_Color [UIColor colorWithRed:244/255.0 green:89/255.0 blue:27/255.0 alpha:1.0]
 
+//为视图绘制边框
+//#define DrawBorderForView(UIView, CGFlot, UIColor)  {UIView.layer.borderWidth = CGFlot; UIView.layer.borderColor = [[UIColor UIColor] CGColor];}
+
+#define DrawBorderForView(uiView, cgFlot, uiColor)  {uiView.layer.borderWidth = cgFlot; uiView.layer.borderColor = [[UIColor uiColor] CGColor];}
+
+
+
+//=====================
+//加载图片宏：
+#define LOADIMAGE(file,type) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
+
+//rgb颜色转换（16进制->10进制）
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+//设置颜色RGB
+#define COLOR(R, G, B, A)  [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+
+
+//一个很高级的 NSLog
+//#define NSLog(format, ...) do {      \
+//fprintf(stderr,  "<%s : %d> %s\n" ,                                           \
+//                [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+//        __LINE__, __func__);                                                        \
+//(NSLog)((format), ##__VA_ARGS__);                                           \
+//fprintf(stderr,  "-------------------------------完美分割线---嘿嘿----------------------------\n" );          \
+//} while ( 0 )
+
+
+
+//A better version of NSLog
+//#define NSLog(format, ...) do {                                                                          \
+fprintf(stderr, "<%s : %d> %s\n",                                           \
+        [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+        __LINE__, __func__);                                                        \
+(NSLog)((format), ##__VA_ARGS__);                                           \
+fprintf(stderr, "-------\n");                                               \
+} while (0)
+
 
 //适配5~ +
 //iPhone 5 ~ 6 屏幕宽高比  0.56  //高宽比 1.775
