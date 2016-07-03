@@ -184,6 +184,33 @@
 			path = MyDouYuUITests;
 			sourceTree = "<group>";
 		};
+		1F3C50031D28AE4000A60F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F61572C1D1F834C0060C874 /* OnlineModel.h */,
+				1F61572D1D1F834C0060C874 /* OnlineModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1F3C50041D28AE4C00A60F14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F6157291D1F80250060C874 /* OnlineCollectionCell.h */,
+				1F61572A1D1F80250060C874 /* OnlineCollectionCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1F3C50051D28AE5900A60F14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FA576081D1E2CFC00136838 /* OnlineViewController.h */,
+				1FA576091D1E2CFC00136838 /* OnlineViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		1FA576111D1E3A7000136838 /* 栏目 */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,12 +232,9 @@
 		1FA576131D1E3A9600136838 /* 直播 */ = {
 			isa = PBXGroup;
 			children = (
-				1FA576081D1E2CFC00136838 /* OnlineViewController.h */,
-				1FA576091D1E2CFC00136838 /* OnlineViewController.m */,
-				1F6157291D1F80250060C874 /* OnlineCollectionCell.h */,
-				1F61572A1D1F80250060C874 /* OnlineCollectionCell.m */,
-				1F61572C1D1F834C0060C874 /* OnlineModel.h */,
-				1F61572D1D1F834C0060C874 /* OnlineModel.m */,
+				1F3C50031D28AE4000A60F14 /* Model */,
+				1F3C50041D28AE4C00A60F14 /* View */,
+				1F3C50051D28AE5900A60F14 /* Controller */,
 			);
 			name = "直播";
 			sourceTree = "<group>";

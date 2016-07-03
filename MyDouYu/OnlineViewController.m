@@ -8,16 +8,16 @@
 
 #import "OnlineViewController.h"
 #import "OnlineCollectionCell.h"
-
+#import "OnlineModel.h"
 
 
 @interface OnlineViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+{
+    NSMutableArray *_dateSourceArray;
+    
+}
 
 @property (nonatomic, strong) UICollectionView *onlineCollection;
-
-@property (nonatomic, strong) NSArray * titleArr;
-@property (nonatomic, strong) NSArray * imgArr;
-@property (nonatomic, strong) NSArray * nickArr;
 
 @end
 
@@ -25,21 +25,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self requestData];
     
     [self initCollectionView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self requestData];
+
+}
 - (void)requestData
 {
     //网络请求
+    //默认图片 Image_no_data
+    _dateSourceArray = [[NSMutableArray alloc]init];
     
-    //假数据
-    self.titleArr = @[@"狂拽吊炸天",@"狂拽吊炸天",@"狂拽吊炸天",@"狂拽吊炸天",@"狂拽吊炸天",@"狂拽吊炸天",@"狂拽吊炸天"];
-    self.imgArr = @[@"Image_about",@"Image_about",@"Image_about",@"Image_about",@"Image_about",@"Image_about",@"Image_about",];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSString *url = [NSString stringWithFormat:@"%@&offset=%@&time=%@",OnlineURL,OnlineURL_a,OnlineURL_b];
+    
+    //manager.baseURL = [manager initWithBaseURL:[NSURL URLWithString:url]];
+    
+    [manager GET:url parameters:url progress:^(NSProgress * _Nonnull downloadProgress) {
+        //Progress
+        //NSLog(@"task: downloadProgress = %@", downloadProgress);
 
-    self.nickArr = @[@"还有谁???",@"还有谁???",@"还有谁???",@"还有谁???",@"还有谁???",@"还有谁???",@"还有谁???"];
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"task = %@; responseObject = %@",task, responseObject);
+        _dateSourceArray = [OnlineModel mj_objectArrayWithKeyValuesArray:[responseObject objectForKey:@"data"]];
+        
+        [self.onlineCollection reloadData];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"task = %@; error = %@",task, error);
+    }];
+    
     
 }
 
@@ -57,7 +78,7 @@
 
     NSLog(@"itemSize = %.2f",itemSize);
     
-    flowLayout.itemSize = CGSizeMake(itemSize, itemSize/(220/120));
+    flowLayout.itemSize = CGSizeMake(itemSize, itemSize/(1.5));
     flowLayout.minimumLineSpacing = padding;
     flowLayout.minimumInteritemSpacing = padding;
     
@@ -92,19 +113,21 @@
 #pragma mark -UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.titleArr.count;
+    return _dateSourceArray.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    OnlineCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"onlineCell" forIndexPath:indexPath];
-    [cell layoutCollectionCell];
+    static NSString * identifier = @"onlineCell";
+   
+    OnlineCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    cell.titleImageView.image = [UIImage imageNamed:self.imgArr[indexPath.row]];
-    cell.roomTitleLabel.text = self.titleArr[indexPath.row];
-    cell.nicknameLabel.text = @"这不科学!!!";
-
+    [cell setOnlineData:_dateSourceArray[indexPath.item]];
+    
+    cell.layer.masksToBounds = YES;
+    cell.layer.cornerRadius = 5.0f;
+    
     DrawBorderForView(cell, 1, brownColor);
     
     return cell;
