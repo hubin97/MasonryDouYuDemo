@@ -9,6 +9,8 @@
 #import "MineController.h"
 #import "MineFirstCell.h"
 
+#import "SettingViewController.h"
+
 @interface MineController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *mineTableView;
@@ -162,6 +164,13 @@
         {
             NSArray *array = self.dataSourceArr[indexPath.row];
             NSLog(@"%@!!!",array[1]);
+            if ([indexPath row] == self.dataSourceArr.count - 2)
+            {
+                NSLog(@"###");
+                SettingViewController *settingVc = [[SettingViewController alloc]init];
+                [settingVc setHidesBottomBarWhenPushed:YES];
+                [self.navigationController pushViewController:settingVc animated:YES];
+            }
         }
             break;
         case 2:

@@ -17,6 +17,8 @@
 		046418D81D1947F200D338CC /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418D71D1947F200D338CC /* BaseTabBarController.m */; };
 		1F61572B1D1F80250060C874 /* OnlineCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61572A1D1F80250060C874 /* OnlineCollectionCell.m */; };
 		1F61572E1D1F834C0060C874 /* OnlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61572D1D1F834C0060C874 /* OnlineModel.m */; };
+		1F9DAE3B1D30A57B0000F424 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DAE3A1D30A57B0000F424 /* SettingViewController.m */; };
+		1F9DAE411D30A8610000F424 /* SettingSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DAE401D30A8610000F424 /* SettingSectionView.m */; };
 		1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576031D1E2CDB00136838 /* RecommendController.m */; };
 		1FA576071D1E2CEC00136838 /* ColumnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576061D1E2CEC00136838 /* ColumnController.m */; };
 		1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576091D1E2CFC00136838 /* OnlineViewController.m */; };
@@ -66,6 +68,10 @@
 		1F61572A1D1F80250060C874 /* OnlineCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineCollectionCell.m; sourceTree = "<group>"; };
 		1F61572C1D1F834C0060C874 /* OnlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineModel.h; sourceTree = "<group>"; };
 		1F61572D1D1F834C0060C874 /* OnlineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineModel.m; sourceTree = "<group>"; };
+		1F9DAE391D30A57B0000F424 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		1F9DAE3A1D30A57B0000F424 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		1F9DAE3F1D30A8610000F424 /* SettingSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingSectionView.h; sourceTree = "<group>"; };
+		1F9DAE401D30A8610000F424 /* SettingSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingSectionView.m; sourceTree = "<group>"; };
 		1FA576021D1E2CDB00136838 /* RecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendController.h; sourceTree = "<group>"; };
 		1FA576031D1E2CDB00136838 /* RecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendController.m; sourceTree = "<group>"; };
 		1FA576051D1E2CEC00136838 /* ColumnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnController.h; sourceTree = "<group>"; };
@@ -211,6 +217,35 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		1F9DAE3C1D30A5820000F424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1F9DAE3D1D30A5890000F424 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FA576151D1E42F700136838 /* MineFirstCell.h */,
+				1FA576161D1E42F700136838 /* MineFirstCell.m */,
+				1F9DAE3F1D30A8610000F424 /* SettingSectionView.h */,
+				1F9DAE401D30A8610000F424 /* SettingSectionView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1F9DAE3E1D30A5900000F424 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5760B1D1E2D0A00136838 /* MineController.h */,
+				1FA5760C1D1E2D0A00136838 /* MineController.m */,
+				1F9DAE391D30A57B0000F424 /* SettingViewController.h */,
+				1F9DAE3A1D30A57B0000F424 /* SettingViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		1FA576111D1E3A7000136838 /* 栏目 */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,10 +277,9 @@
 		1FA576141D1E3A9C00136838 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				1FA5760B1D1E2D0A00136838 /* MineController.h */,
-				1FA5760C1D1E2D0A00136838 /* MineController.m */,
-				1FA576151D1E42F700136838 /* MineFirstCell.h */,
-				1FA576161D1E42F700136838 /* MineFirstCell.m */,
+				1F9DAE3C1D30A5820000F424 /* Model */,
+				1F9DAE3D1D30A5890000F424 /* View */,
+				1F9DAE3E1D30A5900000F424 /* Controller */,
 			);
 			name = "我的";
 			sourceTree = "<group>";
@@ -450,9 +484,11 @@
 			files = (
 				046418D81D1947F200D338CC /* BaseTabBarController.m in Sources */,
 				1FA5761A1D1E625200136838 /* BaseViewController.m in Sources */,
+				1F9DAE3B1D30A57B0000F424 /* SettingViewController.m in Sources */,
 				1F61572B1D1F80250060C874 /* OnlineCollectionCell.m in Sources */,
 				1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */,
 				046418A71D19446D00D338CC /* AppDelegate.m in Sources */,
+				1F9DAE411D30A8610000F424 /* SettingSectionView.m in Sources */,
 				1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */,
 				1F61572E1D1F834C0060C874 /* OnlineModel.m in Sources */,
 				1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */,
