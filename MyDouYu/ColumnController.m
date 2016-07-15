@@ -8,6 +8,7 @@
 
 #import "ColumnController.h"
 
+#import "ColumnCell.h"
 @interface ColumnController ()
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041252DE1D38E89F00C7AC47 /* ColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041252DD1D38E89F00C7AC47 /* ColumnCell.m */; };
+		041252E11D38E91D00C7AC47 /* ColumnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041252E01D38E91D00C7AC47 /* ColumnModel.m */; };
 		046418A41D19446D00D338CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418A31D19446D00D338CC /* main.m */; };
 		046418A71D19446D00D338CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418A61D19446D00D338CC /* AppDelegate.m */; };
 		046418AD1D19446D00D338CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046418AB1D19446D00D338CC /* Main.storyboard */; };
@@ -47,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041252DC1D38E89F00C7AC47 /* ColumnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnCell.h; sourceTree = "<group>"; };
+		041252DD1D38E89F00C7AC47 /* ColumnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnCell.m; sourceTree = "<group>"; };
+		041252DF1D38E91D00C7AC47 /* ColumnModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnModel.h; sourceTree = "<group>"; };
+		041252E01D38E91D00C7AC47 /* ColumnModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnModel.m; sourceTree = "<group>"; };
 		0464189F1D19446D00D338CC /* MyDouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046418A31D19446D00D338CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		046418A51D19446D00D338CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -249,8 +255,12 @@
 		1FA576111D1E3A7000136838 /* 栏目 */ = {
 			isa = PBXGroup;
 			children = (
+				041252DF1D38E91D00C7AC47 /* ColumnModel.h */,
+				041252E01D38E91D00C7AC47 /* ColumnModel.m */,
 				1FA576051D1E2CEC00136838 /* ColumnController.h */,
 				1FA576061D1E2CEC00136838 /* ColumnController.m */,
+				041252DC1D38E89F00C7AC47 /* ColumnCell.h */,
+				041252DD1D38E89F00C7AC47 /* ColumnCell.m */,
 			);
 			name = "栏目";
 			sourceTree = "<group>";
@@ -489,10 +499,12 @@
 				1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */,
 				046418A71D19446D00D338CC /* AppDelegate.m in Sources */,
 				1F9DAE411D30A8610000F424 /* SettingSectionView.m in Sources */,
+				041252E11D38E91D00C7AC47 /* ColumnModel.m in Sources */,
 				1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */,
 				1F61572E1D1F834C0060C874 /* OnlineModel.m in Sources */,
 				1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */,
 				046418A41D19446D00D338CC /* main.m in Sources */,
+				041252DE1D38E89F00C7AC47 /* ColumnCell.m in Sources */,
 				1FA576071D1E2CEC00136838 /* ColumnController.m in Sources */,
 				1FA576171D1E42F700136838 /* MineFirstCell.m in Sources */,
 				1FA5760D1D1E2D0A00136838 /* MineController.m in Sources */,
