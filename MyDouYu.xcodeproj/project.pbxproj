@@ -17,6 +17,8 @@
 		046418BD1D19446D00D338CC /* MyDouYuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418BC1D19446D00D338CC /* MyDouYuTests.m */; };
 		046418C81D19446D00D338CC /* MyDouYuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418C71D19446D00D338CC /* MyDouYuUITests.m */; };
 		046418D81D1947F200D338CC /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046418D71D1947F200D338CC /* BaseTabBarController.m */; };
+		1F287ACD1D39D2EF00614EFD /* SettingSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F287ACC1D39D2EF00614EFD /* SettingSwitchCell.m */; };
+		1F287AD01D39FF1700614EFD /* SettingSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F287ACF1D39FF1700614EFD /* SettingSliderCell.m */; };
 		1F61572B1D1F80250060C874 /* OnlineCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61572A1D1F80250060C874 /* OnlineCollectionCell.m */; };
 		1F61572E1D1F834C0060C874 /* OnlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61572D1D1F834C0060C874 /* OnlineModel.m */; };
 		1F9DAE3B1D30A57B0000F424 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DAE3A1D30A57B0000F424 /* SettingViewController.m */; };
@@ -70,6 +72,10 @@
 		046418D51D19460A00D338CC /* MyDouYu_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDouYu_PrefixHeader.pch; sourceTree = "<group>"; };
 		046418D61D1947F200D338CC /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		046418D71D1947F200D338CC /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		1F287ACB1D39D2EF00614EFD /* SettingSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingSwitchCell.h; sourceTree = "<group>"; };
+		1F287ACC1D39D2EF00614EFD /* SettingSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingSwitchCell.m; sourceTree = "<group>"; };
+		1F287ACE1D39FF1700614EFD /* SettingSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingSliderCell.h; sourceTree = "<group>"; };
+		1F287ACF1D39FF1700614EFD /* SettingSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingSliderCell.m; sourceTree = "<group>"; };
 		1F6157291D1F80250060C874 /* OnlineCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineCollectionCell.h; sourceTree = "<group>"; };
 		1F61572A1D1F80250060C874 /* OnlineCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineCollectionCell.m; sourceTree = "<group>"; };
 		1F61572C1D1F834C0060C874 /* OnlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineModel.h; sourceTree = "<group>"; };
@@ -237,6 +243,10 @@
 				1FA576161D1E42F700136838 /* MineFirstCell.m */,
 				1F9DAE3F1D30A8610000F424 /* SettingSectionView.h */,
 				1F9DAE401D30A8610000F424 /* SettingSectionView.m */,
+				1F287ACB1D39D2EF00614EFD /* SettingSwitchCell.h */,
+				1F287ACC1D39D2EF00614EFD /* SettingSwitchCell.m */,
+				1F287ACE1D39FF1700614EFD /* SettingSliderCell.h */,
+				1F287ACF1D39FF1700614EFD /* SettingSliderCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -499,7 +509,9 @@
 				1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */,
 				046418A71D19446D00D338CC /* AppDelegate.m in Sources */,
 				1F9DAE411D30A8610000F424 /* SettingSectionView.m in Sources */,
+				1F287AD01D39FF1700614EFD /* SettingSliderCell.m in Sources */,
 				041252E11D38E91D00C7AC47 /* ColumnModel.m in Sources */,
+				1F287ACD1D39D2EF00614EFD /* SettingSwitchCell.m in Sources */,
 				1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */,
 				1F61572E1D1F834C0060C874 /* OnlineModel.m in Sources */,
 				1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */,

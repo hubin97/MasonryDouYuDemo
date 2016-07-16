@@ -35,9 +35,11 @@
 
         [self addSubview:self.flodButton];
         [self.flodButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(ws).insets(UIEdgeInsetsMake(5*K5SWScale, ws.frame.size.width - 40 *K5SWScale, 5*K5SWScale, 20*K5SWScale));
-            make.width.mas_equalTo(self.flodButton.mas_height);
+            //make.edges.equalTo(ws).insets(UIEdgeInsetsMake(5*K5SWScale, ws.frame.size.width - 40 *K5SWScale, 5*K5SWScale, 20*K5SWScale));
             
+            make.right.equalTo(self.mas_right).offset(- 5* K5SWScale);
+            
+            make.width.mas_equalTo(self.flodButton.mas_height);
             make.centerY.equalTo(ws);
         }];
         
@@ -47,8 +49,8 @@
         //[self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_right"] forState:UIControlStateSelected];
         
         [self.flodButton setSelected:YES];
-        [self.flodButton addTarget:self action:@selector(flodBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         
+        [self.flodButton addTarget:self action:@selector(flodBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         return self;
     }
     return self;
@@ -68,6 +70,7 @@
         [self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_down"] forState:UIControlStateNormal];
     }
     self.flodButton.selected = !sender.selected;
+
 }
 
 @end
