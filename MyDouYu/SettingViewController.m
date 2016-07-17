@@ -21,6 +21,7 @@
     
     CGFloat adjustAlpha;
     CGFloat adjustFont;
+    NSMutableDictionary *_flodStatusDict; //折叠状态数组 0:不折叠 1:折叠
     
 }
 @property (nonatomic ,strong) UITableView *settingTableView;
@@ -69,6 +70,10 @@
     
     self.settingTableView.dataSource = self;
     self.settingTableView.delegate = self;
+    
+    self.settingTableView.backgroundColor = COLOR(239, 239, 244, 1);
+    self.settingTableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+
 }
 
 #pragma mark - View Life
@@ -88,6 +93,11 @@
 {
     adjustAlpha = 1.0f;
     adjustFont  = 15.0f;
+    
+    _flodStatusDict = [NSMutableDictionary dictionaryWithDictionary:@{@"0":@"0",@"1":@"0",@"2":@"0"}];
+    
+    [_sectionView.flodButton setSelected:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,6 +111,49 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)fold:(UIButton *)sender
+{
+    NSLog(@"sender%ld",(long)sender.tag);
+    
+    _sectionView.flodButton = [_sectionView viewWithTag:sender.tag];
+    
+    NSMutableString *str = [NSMutableString stringWithFormat:@"%ld",(long)sender.tag];
+    NSString *status = [_flodStatusDict objectForKey:[str substringFromIndex:2]];
+    
+    NSString *needStatus = [NSString stringWithFormat:@"%d",![status intValue]];
+    
+    [_flodStatusDict setObject:needStatus forKey:[str substringFromIndex:2]];
+    
+    
+    [self.settingTableView reloadData];
+}
+
+- (void)sliderValueChange:(id)sender
+{
+    UISlider *slider = (UISlider *)sender;
+    NSLog(@"slider.tag = %ld, slider.value = %.2f",(long)slider.tag,slider.value);
+    //3/5
+    switch (slider.tag)
+    {
+        case 3:
+            adjustAlpha = slider.value;
+            break;
+        case 5:
+            adjustFont  = 12 * K5SWScale * slider.value;
+            break;
+            
+        default:
+            break;
+    }
+    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:1 inSection:1];
+    [self.settingTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)switchBtnClick:(UIButton *)sender
+{
+    NSLog(@"sender.tag = %ld,",(long)sender.tag);
+}
+
 #pragma mark - Delegate And DataSource
 #pragma mark - table data source
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -111,19 +164,29 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //return 3;
-    switch (section)
+    
+    int value = [[_flodStatusDict objectForKey:[NSString stringWithFormat:@"%ld",(long)section]] intValue];
+    
+    if(value)
     {
-        case 0:
-            return 1;  //系统设置
-            break;
-        case 1:
-            return 9;  //直播设置
-            break;
-        case 2:
-            return 4;  //其他设置
-            break;
-        default:
-            break;
+        return 0;
+    }
+    else
+    {
+        switch (section)
+        {
+            case 0:
+                return 1;  //系统设置
+                break;
+            case 1:
+                return 9;  //直播设置
+                break;
+            case 2:
+                return 4;  //其他设置
+                break;
+            default:
+                break;
+        }
     }
     return 0;
 }
@@ -147,11 +210,15 @@
     cell.textLabel.font = [UIFont systemFontOfSize:15.0f * K5SWScale];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+//    self.settingTableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+
     switch (indexPath.section)
     {
         case 0:
         {
             switchCell.titleLabel.text = @"列表自动加载";
+            [switchCell.switchBtn addTarget:self action:@selector(switchBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            switchCell.switchBtn.tag = 200 + indexPath.section;
             return switchCell;
         }
             break;
@@ -161,7 +228,11 @@
             {
                 case 0:
                 {
+#warning 此处刷新后存在复用文字 重叠
                     switchCell.titleLabel.text = @"播放器手势";
+                    [switchCell.switchBtn addTarget:self action:@selector(switchBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+                    switchCell.switchBtn.tag = 200 + indexPath.section;
+                    
                     return switchCell;
                 }
                     break;
@@ -253,6 +324,8 @@
             if (indexPath.row == 0)
             {
                 switchCell.textLabel.text = otherSetArr[indexPath.row];
+                [switchCell.switchBtn addTarget:self action:@selector(switchBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+                switchCell.switchBtn.tag = 200 + indexPath.section;
                 return switchCell;
             }
             else
@@ -281,7 +354,8 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-#warning 自定义子控件如何返回flodbutton的select状态?
+#warning 自定义子控件如何返回flodbutton的select状态? 有没有更优的方法?
+    
     _sectionView = [[SettingSectionView alloc]init];
     _sectionView.backgroundColor = COLOR(239, 239, 244, 1);
     _sectionView.titleLabel.textColor = [UIColor grayColor];
@@ -289,9 +363,27 @@
     NSArray *sectionTitleArr = @[@"系统设置",@"直播设置",@"其他设置"];
     
     _sectionView.titleLabel.text = sectionTitleArr[section];
+    
+    [_sectionView.flodButton addTarget:self action:@selector(fold:) forControlEvents:UIControlEventTouchUpInside];
+    _sectionView.flodButton.tag = 100 + section;
 
+    
+    int value = [[_flodStatusDict objectForKey:[NSString stringWithFormat:@"%ld",(long)section]] intValue];
+
+    if (value)
+    {
+        NSLog(@"Image_arrow_right");
+        [_sectionView.flodButton setImage:[UIImage imageNamed:@"Image_arrow_right"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        NSLog(@"Image_arrow_down");
+        [_sectionView.flodButton setImage:[UIImage imageNamed:@"Image_arrow_down"] forState:UIControlStateNormal];
+    }
+    
     return _sectionView;
 }
+
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -299,26 +391,7 @@
     return kRowHeight;
 }
 
-- (void)sliderValueChange:(id)sender
-{
-    UISlider *slider = (UISlider *)sender;
-    NSLog(@"slider.tag = %ld, slider.value = %.2f",(long)slider.tag,slider.value);
-    //3/5
-    switch (slider.tag)
-    {
-        case 3:
-            adjustAlpha = slider.value;
-            break;
-        case 5:
-            adjustFont  = 12 * K5SWScale * slider.value;
-            break;
-            
-        default:
-            break;
-    }
-    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:1 inSection:1];
-    [self.settingTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationNone];
-}
+
 /*
 #pragma mark - Navigation
 

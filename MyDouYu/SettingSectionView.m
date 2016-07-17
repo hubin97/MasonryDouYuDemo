@@ -9,8 +9,8 @@
 #import "SettingSectionView.h"
 
 @implementation SettingSectionView
-@synthesize titleLabel;
-@synthesize flodButton;
+//@synthesize titleLabel;
+//@synthesize flodButton;
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -45,12 +45,10 @@
         
         //Image_arrow_right
         //Image_arrow_down
-        [self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_down"] forState:UIControlStateNormal];
-        //[self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_right"] forState:UIControlStateSelected];
+//        [self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_down"] forState:UIControlStateNormal];
+//        [self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_right"] forState:UIControlStateSelected];
         
-        [self.flodButton setSelected:YES];
-        
-        [self.flodButton addTarget:self action:@selector(flodBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//        [self.flodButton addTarget:self action:@selector(flodBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         return self;
     }
     return self;
@@ -59,17 +57,17 @@
 - (void)flodBtnClick:(UIButton *)sender
 {
     
-    if (sender.selected)
-    {
-        NSLog(@"Image_arrow_right");
-        [self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_right"] forState:UIControlStateNormal];
-    }
-    else
-    {
-        NSLog(@"Image_arrow_down");
-        [self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_down"] forState:UIControlStateNormal];
-    }
-    self.flodButton.selected = !sender.selected;
+//    if (sender.selected)
+//    {
+//        NSLog(@"Image_arrow_right");
+//        [self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_right"] forState:UIControlStateNormal];
+//    }
+//    else
+//    {
+//        NSLog(@"Image_arrow_down");
+//        [self.flodButton setImage:[UIImage imageNamed:@"Image_arrow_down"] forState:UIControlStateNormal];
+//    }
+//    self.flodButton.selected = !sender.selected;
 
 }
 

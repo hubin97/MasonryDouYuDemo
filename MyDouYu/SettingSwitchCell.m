@@ -50,4 +50,13 @@
     
 }
 
+-(void)prepareForReuse
+{
+    [super prepareForReuse];
+    
+    self.titleLabel.text = nil;
+    [self.titleLabel removeFromSuperview];
+    [self.switchBtn removeFromSuperview];
+    
+}
 @end
