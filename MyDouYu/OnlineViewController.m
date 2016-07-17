@@ -14,7 +14,7 @@
 @interface OnlineViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 {
     NSMutableArray *_dateSourceArray;
-    
+    int times; //记录上拉的次数
 }
 
 @property (nonatomic, strong) UICollectionView *onlineCollection;
@@ -26,7 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    times=0;
+
     [self initCollectionView];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -34,6 +37,8 @@
     [super viewWillAppear:animated];
     
     [self requestData];
+    
+    [self loadMoreData];
 
 }
 - (void)requestData
@@ -47,7 +52,7 @@
     
     //manager.baseURL = [manager initWithBaseURL:[NSURL URLWithString:url]];
     
-    [manager GET:url parameters:url progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         //Progress
         //NSLog(@"task: downloadProgress = %@", downloadProgress);
 
@@ -61,6 +66,62 @@
         NSLog(@"task = %@; error = %@",task, error);
     }];
     
+    
+}
+
+-(void)loadMoreData
+{
+
+    self.onlineCollection.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        NSString *url = [NSString stringWithFormat:@"%@&offset=%@&time=%@",OnlineURL,OnlineURL_a,OnlineURL_b];
+        
+        [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            _dateSourceArray = [OnlineModel mj_objectArrayWithKeyValuesArray:[responseObject objectForKey:@"data"]];
+            
+            [self.onlineCollection reloadData];
+            [self.onlineCollection.mj_header endRefreshing];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [self.onlineCollection.mj_header endRefreshing];
+
+        }];
+    }];
+    
+    [self.onlineCollection.mj_header beginRefreshing];
+    
+    
+    
+    self.onlineCollection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+        times += 20;
+        NSString *time = [NSString stringWithFormat:@"%d",times];
+        
+        
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        NSString *url = [NSString stringWithFormat:@"%@&offset=%@&time=%@",OnlineURL,time,OnlineURL_b];
+        
+        [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSArray *array = [OnlineModel mj_objectArrayWithKeyValuesArray:[responseObject objectForKey:@"data"]];
+            
+            for (OnlineModel *moreData in array) {
+                
+                [_dateSourceArray addObject:moreData];
+            }
+            
+            [self.onlineCollection reloadData];
+            [self.onlineCollection.mj_footer endRefreshing];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [self.onlineCollection.mj_footer endRefreshing];
+            
+        }];
+    }];
+    
+    self.onlineCollection.mj_footer.hidden = YES;
     
 }
 
