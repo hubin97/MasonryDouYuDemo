@@ -23,6 +23,10 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 
+
+#import "UIImageView+WebCache.h"  //SDWebImage 图片缓存
+
+
 //UI
 #define TabBar_T_Color [UIColor colorWithRed:244/255.0 green:89/255.0 blue:27/255.0 alpha:1.0]
 
@@ -91,11 +95,14 @@ fprintf(stderr, "-------\n");                                               \
 
 #define CHANEL_URl @"http://www.douyutv.com/api/v1/channel?aid=ios&auth=6a4c6b01d851ceece76aee1980b9e5bb&client_sys=ios&limit=4&time="
 
+//column 栏目页
+#define ColumnURL @"http://www.douyutv.com/api/v1/game?aid=ios&auth=3f252c3294b31a61fbdd890a45609549&client_sys=ios&time=1446450360"
 
 //online 直播页
 #define OnlineURL @"http://www.douyutv.com/api/v1/live?aid=ios&auth=b317487532542c2f8200f374f3153da2&client_sys=ios&limit=20"
 #define OnlineURL_a @"0"
 #define OnlineURL_b @"time=1446684180"
+
 
 
 #endif /* MyDouYu_PrefixHeader_pch */

@@ -265,12 +265,9 @@
 		1FA576111D1E3A7000136838 /* 栏目 */ = {
 			isa = PBXGroup;
 			children = (
-				041252DF1D38E91D00C7AC47 /* ColumnModel.h */,
-				041252E01D38E91D00C7AC47 /* ColumnModel.m */,
-				1FA576051D1E2CEC00136838 /* ColumnController.h */,
-				1FA576061D1E2CEC00136838 /* ColumnController.m */,
-				041252DC1D38E89F00C7AC47 /* ColumnCell.h */,
-				041252DD1D38E89F00C7AC47 /* ColumnCell.m */,
+				1FB8CCF21D4332C300C7567B /* View */,
+				1FB8CCF41D4332D100C7567B /* Controller */,
+				1FB8CCF31D4332CB00C7567B /* Model */,
 			);
 			name = "栏目";
 			sourceTree = "<group>";
@@ -302,6 +299,33 @@
 				1F9DAE3E1D30A5900000F424 /* Controller */,
 			);
 			name = "我的";
+			sourceTree = "<group>";
+		};
+		1FB8CCF21D4332C300C7567B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				041252DC1D38E89F00C7AC47 /* ColumnCell.h */,
+				041252DD1D38E89F00C7AC47 /* ColumnCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1FB8CCF31D4332CB00C7567B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				041252DF1D38E91D00C7AC47 /* ColumnModel.h */,
+				041252E01D38E91D00C7AC47 /* ColumnModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1FB8CCF41D4332D100C7567B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FA576051D1E2CEC00136838 /* ColumnController.h */,
+				1FA576061D1E2CEC00136838 /* ColumnController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		951DFD20782B0CD7D788FF97 /* Frameworks */ = {
