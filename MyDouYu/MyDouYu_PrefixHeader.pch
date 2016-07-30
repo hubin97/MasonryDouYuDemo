@@ -28,6 +28,10 @@
 
 
 //UI
+
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+#define kScreenH [UIScreen mainScreen].bounds.size.height
+
 #define TabBar_T_Color [UIColor colorWithRed:244/255.0 green:89/255.0 blue:27/255.0 alpha:1.0]
 
 //为视图绘制边框

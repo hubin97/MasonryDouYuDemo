@@ -30,6 +30,15 @@
 		1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */; };
 		1FA576171D1E42F700136838 /* MineFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576161D1E42F700136838 /* MineFirstCell.m */; };
 		1FA5761A1D1E625200136838 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA576191D1E625100136838 /* BaseViewController.m */; };
+		1FF6E3A21D4C8E1100F261ED /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3921D4C8E1100F261ED /* NSData+SDDataCache.m */; };
+		1FF6E3A31D4C8E1100F261ED /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3951D4C8E1100F261ED /* TAAbstractDotView.m */; };
+		1FF6E3A41D4C8E1100F261ED /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3971D4C8E1100F261ED /* TAAnimatedDotView.m */; };
+		1FF6E3A51D4C8E1100F261ED /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3991D4C8E1100F261ED /* TADotView.m */; };
+		1FF6E3A61D4C8E1100F261ED /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E39B1D4C8E1100F261ED /* TAPageControl.m */; };
+		1FF6E3A71D4C8E1100F261ED /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E39D1D4C8E1100F261ED /* SDCollectionViewCell.m */; };
+		1FF6E3A81D4C8E1100F261ED /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E39F1D4C8E1100F261ED /* SDCycleScrollView.m */; };
+		1FF6E3A91D4C8E1100F261ED /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3A11D4C8E1100F261ED /* UIView+SDExtension.m */; };
+		1FF6E3AC1D4CAB8000F261ED /* TopAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3AB1D4CAB8000F261ED /* TopAdModel.m */; };
 		B40B5CCFA95811EC6A27F4B2 /* libPods-MyDouYu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +107,24 @@
 		1FA576161D1E42F700136838 /* MineFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFirstCell.m; sourceTree = "<group>"; };
 		1FA576181D1E625100136838 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		1FA576191D1E625100136838 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		1FF6E3911D4C8E1100F261ED /* NSData+SDDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SDDataCache.h"; sourceTree = "<group>"; };
+		1FF6E3921D4C8E1100F261ED /* NSData+SDDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SDDataCache.m"; sourceTree = "<group>"; };
+		1FF6E3941D4C8E1100F261ED /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		1FF6E3951D4C8E1100F261ED /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		1FF6E3961D4C8E1100F261ED /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		1FF6E3971D4C8E1100F261ED /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		1FF6E3981D4C8E1100F261ED /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		1FF6E3991D4C8E1100F261ED /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		1FF6E39A1D4C8E1100F261ED /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		1FF6E39B1D4C8E1100F261ED /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		1FF6E39C1D4C8E1100F261ED /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		1FF6E39D1D4C8E1100F261ED /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		1FF6E39E1D4C8E1100F261ED /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		1FF6E39F1D4C8E1100F261ED /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		1FF6E3A01D4C8E1100F261ED /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		1FF6E3A11D4C8E1100F261ED /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		1FF6E3AA1D4CAB8000F261ED /* TopAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopAdModel.h; sourceTree = "<group>"; };
+		1FF6E3AB1D4CAB8000F261ED /* TopAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAdModel.m; sourceTree = "<group>"; };
 		256BC3C7559698A72174B308 /* Pods-MyDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.release.xcconfig"; sourceTree = "<group>"; };
 		71BA5C1CB50BFAC1A44FC666 /* Pods-MyDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.debug.xcconfig"; sourceTree = "<group>"; };
 		CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDouYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,21 +181,17 @@
 		046418A11D19446D00D338CC /* MyDouYu */ = {
 			isa = PBXGroup;
 			children = (
-				046418D51D19460A00D338CC /* MyDouYu_PrefixHeader.pch */,
-				1FA5760E1D1E2DFE00136838 /* BaseNavigationController.h */,
-				1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */,
-				1FA576181D1E625100136838 /* BaseViewController.h */,
-				1FA576191D1E625100136838 /* BaseViewController.m */,
-				046418D61D1947F200D338CC /* BaseTabBarController.h */,
-				046418D71D1947F200D338CC /* BaseTabBarController.m */,
-				046418A51D19446D00D338CC /* AppDelegate.h */,
-				046418A61D19446D00D338CC /* AppDelegate.m */,
+				1FF6E38F1D4C8DE000F261ED /* 3th */,
+				1FF6E38E1D4C8DB000F261ED /* Global */,
 				1FA576121D1E3A7F00136838 /* 推荐 */,
 				1FA576111D1E3A7000136838 /* 栏目 */,
 				1FA576131D1E3A9600136838 /* 直播 */,
 				1FA576141D1E3A9C00136838 /* 我的 */,
 				046418AB1D19446D00D338CC /* Main.storyboard */,
 				046418AE1D19446D00D338CC /* Assets.xcassets */,
+				046418D51D19460A00D338CC /* MyDouYu_PrefixHeader.pch */,
+				046418A51D19446D00D338CC /* AppDelegate.h */,
+				046418A61D19446D00D338CC /* AppDelegate.m */,
 				046418B01D19446D00D338CC /* LaunchScreen.storyboard */,
 				046418B31D19446D00D338CC /* Info.plist */,
 				046418A21D19446D00D338CC /* Supporting Files */,
@@ -277,6 +300,8 @@
 			children = (
 				1FA576021D1E2CDB00136838 /* RecommendController.h */,
 				1FA576031D1E2CDB00136838 /* RecommendController.m */,
+				1FF6E3AA1D4CAB8000F261ED /* TopAdModel.h */,
+				1FF6E3AB1D4CAB8000F261ED /* TopAdModel.m */,
 			);
 			name = "推荐";
 			sourceTree = "<group>";
@@ -326,6 +351,59 @@
 				1FA576061D1E2CEC00136838 /* ColumnController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		1FF6E38E1D4C8DB000F261ED /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5760E1D1E2DFE00136838 /* BaseNavigationController.h */,
+				1FA5760F1D1E2DFE00136838 /* BaseNavigationController.m */,
+				1FA576181D1E625100136838 /* BaseViewController.h */,
+				1FA576191D1E625100136838 /* BaseViewController.m */,
+				046418D61D1947F200D338CC /* BaseTabBarController.h */,
+				046418D71D1947F200D338CC /* BaseTabBarController.m */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		1FF6E38F1D4C8DE000F261ED /* 3th */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6E3901D4C8E1100F261ED /* SDCycleScrollView */,
+			);
+			name = 3th;
+			sourceTree = "<group>";
+		};
+		1FF6E3901D4C8E1100F261ED /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6E3911D4C8E1100F261ED /* NSData+SDDataCache.h */,
+				1FF6E3921D4C8E1100F261ED /* NSData+SDDataCache.m */,
+				1FF6E3931D4C8E1100F261ED /* PageControl */,
+				1FF6E39C1D4C8E1100F261ED /* SDCollectionViewCell.h */,
+				1FF6E39D1D4C8E1100F261ED /* SDCollectionViewCell.m */,
+				1FF6E39E1D4C8E1100F261ED /* SDCycleScrollView.h */,
+				1FF6E39F1D4C8E1100F261ED /* SDCycleScrollView.m */,
+				1FF6E3A01D4C8E1100F261ED /* UIView+SDExtension.h */,
+				1FF6E3A11D4C8E1100F261ED /* UIView+SDExtension.m */,
+			);
+			name = SDCycleScrollView;
+			path = 3th/SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		1FF6E3931D4C8E1100F261ED /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6E3941D4C8E1100F261ED /* TAAbstractDotView.h */,
+				1FF6E3951D4C8E1100F261ED /* TAAbstractDotView.m */,
+				1FF6E3961D4C8E1100F261ED /* TAAnimatedDotView.h */,
+				1FF6E3971D4C8E1100F261ED /* TAAnimatedDotView.m */,
+				1FF6E3981D4C8E1100F261ED /* TADotView.h */,
+				1FF6E3991D4C8E1100F261ED /* TADotView.m */,
+				1FF6E39A1D4C8E1100F261ED /* TAPageControl.h */,
+				1FF6E39B1D4C8E1100F261ED /* TAPageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		951DFD20782B0CD7D788FF97 /* Frameworks */ = {
@@ -526,24 +604,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF6E3AC1D4CAB8000F261ED /* TopAdModel.m in Sources */,
 				046418D81D1947F200D338CC /* BaseTabBarController.m in Sources */,
+				1FF6E3A31D4C8E1100F261ED /* TAAbstractDotView.m in Sources */,
 				1FA5761A1D1E625200136838 /* BaseViewController.m in Sources */,
 				1F9DAE3B1D30A57B0000F424 /* SettingViewController.m in Sources */,
 				1F61572B1D1F80250060C874 /* OnlineCollectionCell.m in Sources */,
 				1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */,
 				046418A71D19446D00D338CC /* AppDelegate.m in Sources */,
+				1FF6E3A91D4C8E1100F261ED /* UIView+SDExtension.m in Sources */,
 				1F9DAE411D30A8610000F424 /* SettingSectionView.m in Sources */,
+				1FF6E3A41D4C8E1100F261ED /* TAAnimatedDotView.m in Sources */,
+				1FF6E3A81D4C8E1100F261ED /* SDCycleScrollView.m in Sources */,
 				1F287AD01D39FF1700614EFD /* SettingSliderCell.m in Sources */,
 				041252E11D38E91D00C7AC47 /* ColumnModel.m in Sources */,
+				1FF6E3A61D4C8E1100F261ED /* TAPageControl.m in Sources */,
 				1F287ACD1D39D2EF00614EFD /* SettingSwitchCell.m in Sources */,
 				1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */,
 				1F61572E1D1F834C0060C874 /* OnlineModel.m in Sources */,
+				1FF6E3A21D4C8E1100F261ED /* NSData+SDDataCache.m in Sources */,
 				1FA576101D1E2DFE00136838 /* BaseNavigationController.m in Sources */,
 				046418A41D19446D00D338CC /* main.m in Sources */,
 				041252DE1D38E89F00C7AC47 /* ColumnCell.m in Sources */,
 				1FA576071D1E2CEC00136838 /* ColumnController.m in Sources */,
+				1FF6E3A51D4C8E1100F261ED /* TADotView.m in Sources */,
 				1FA576171D1E42F700136838 /* MineFirstCell.m in Sources */,
 				1FA5760D1D1E2D0A00136838 /* MineController.m in Sources */,
+				1FF6E3A71D4C8E1100F261ED /* SDCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
