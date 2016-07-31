@@ -39,6 +39,8 @@
 		1FF6E3A81D4C8E1100F261ED /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E39F1D4C8E1100F261ED /* SDCycleScrollView.m */; };
 		1FF6E3A91D4C8E1100F261ED /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3A11D4C8E1100F261ED /* UIView+SDExtension.m */; };
 		1FF6E3AC1D4CAB8000F261ED /* TopAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3AB1D4CAB8000F261ED /* TopAdModel.m */; };
+		1FF6E3AF1D4CB6A600F261ED /* NewShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3AE1D4CB6A600F261ED /* NewShowModel.m */; };
+		1FF6E3B21D4CB7DB00F261ED /* NewShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3B11D4CB7DB00F261ED /* NewShowCell.m */; };
 		B40B5CCFA95811EC6A27F4B2 /* libPods-MyDouYu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +127,10 @@
 		1FF6E3A11D4C8E1100F261ED /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		1FF6E3AA1D4CAB8000F261ED /* TopAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopAdModel.h; sourceTree = "<group>"; };
 		1FF6E3AB1D4CAB8000F261ED /* TopAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAdModel.m; sourceTree = "<group>"; };
+		1FF6E3AD1D4CB6A600F261ED /* NewShowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewShowModel.h; sourceTree = "<group>"; };
+		1FF6E3AE1D4CB6A600F261ED /* NewShowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShowModel.m; sourceTree = "<group>"; };
+		1FF6E3B01D4CB7DB00F261ED /* NewShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewShowCell.h; sourceTree = "<group>"; };
+		1FF6E3B11D4CB7DB00F261ED /* NewShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShowCell.m; sourceTree = "<group>"; };
 		256BC3C7559698A72174B308 /* Pods-MyDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.release.xcconfig"; sourceTree = "<group>"; };
 		71BA5C1CB50BFAC1A44FC666 /* Pods-MyDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.debug.xcconfig"; sourceTree = "<group>"; };
 		CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDouYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +306,10 @@
 			children = (
 				1FA576021D1E2CDB00136838 /* RecommendController.h */,
 				1FA576031D1E2CDB00136838 /* RecommendController.m */,
+				1FF6E3B01D4CB7DB00F261ED /* NewShowCell.h */,
+				1FF6E3B11D4CB7DB00F261ED /* NewShowCell.m */,
+				1FF6E3AD1D4CB6A600F261ED /* NewShowModel.h */,
+				1FF6E3AE1D4CB6A600F261ED /* NewShowModel.m */,
 				1FF6E3AA1D4CAB8000F261ED /* TopAdModel.h */,
 				1FF6E3AB1D4CAB8000F261ED /* TopAdModel.m */,
 			);
@@ -610,9 +620,11 @@
 				1FA5761A1D1E625200136838 /* BaseViewController.m in Sources */,
 				1F9DAE3B1D30A57B0000F424 /* SettingViewController.m in Sources */,
 				1F61572B1D1F80250060C874 /* OnlineCollectionCell.m in Sources */,
+				1FF6E3B21D4CB7DB00F261ED /* NewShowCell.m in Sources */,
 				1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */,
 				046418A71D19446D00D338CC /* AppDelegate.m in Sources */,
 				1FF6E3A91D4C8E1100F261ED /* UIView+SDExtension.m in Sources */,
+				1FF6E3AF1D4CB6A600F261ED /* NewShowModel.m in Sources */,
 				1F9DAE411D30A8610000F424 /* SettingSectionView.m in Sources */,
 				1FF6E3A41D4C8E1100F261ED /* TAAnimatedDotView.m in Sources */,
 				1FF6E3A81D4C8E1100F261ED /* SDCycleScrollView.m in Sources */,
