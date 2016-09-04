@@ -11,5 +11,5 @@
 
 @interface NewShowCell : UITableViewCell
 
-- (void)setContentView:(NewShowModel *)newShowModel;
+- (void)setContentViewWithArrays:(NSArray *)newShowArr;
 @end
