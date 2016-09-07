@@ -17,6 +17,21 @@
 {
     WS(ws);
     
+    //移除旧视图,避免反复加载出现问题
+    
+    for (UIView *tmpView in self.subviews)
+    {
+        [tmpView removeFromSuperview];
+    }
+    
+    
+    //NSLog(@"newShowArr:%@",newShowArr);
+    
+    for (NewShowModel *model in newShowArr)
+    {
+        NSLog(@"game_url;%@",model.game_url);
+    }
+    
     UIScrollView *newShowScrol = [[UIScrollView alloc]init];
     [self addSubview:newShowScrol];
     newShowScrol.showsVerticalScrollIndicator = NO;
@@ -39,11 +54,11 @@
         //单个cell
         [cellView mas_makeConstraints:^(MASConstraintMaker *make) {
             
-            make.top.mas_equalTo(newShowScrol.mas_top).offset(padding);
-            make.bottom.mas_equalTo(newShowScrol.mas_bottom).offset(-padding);
+            make.top.mas_equalTo(ws.mas_top).offset(padding);
+            make.bottom.mas_equalTo(ws.mas_bottom).offset(-padding);
 
 #warning 问题出在哪里? 无法设置宽高比?
-            //???make.height.mas_equalTo(cellView.mas_width).multipliedBy(cellViewScal);
+            make.height.mas_equalTo(cellView.mas_width).multipliedBy(cellViewScal);
             
             //make.width.mas_equalTo(cellView.mas_height).multipliedBy(1/cellViewScal);
 
@@ -72,11 +87,14 @@
             
             make.height.mas_equalTo(imageView.mas_width);
         }];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:newShowModel.game_url] placeholderImage:[UIImage imageNamed:@"Image_no_data"]];
+        //[imageView sd_setImageWithURL:[NSURL URLWithString:newShowModel.game_url] placeholderImage:[UIImage imageNamed:@"Image_no_data"]];
+        
+        [imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@",NEW_Image_URl,[self countNumAndChangeformat:newShowModel.owner_uid],NEW_Time_URl,[self GetNowTimes]]] placeholderImage:[UIImage imageNamed:@"Img_default"]];
+
         
         imageView.layer.masksToBounds = YES;
-        imageView.layer.cornerRadius  = (cellHeight/cellViewScal * K5SWScale - 2 * padding)/2;
-        
+        imageView.layer.cornerRadius  = ((cellHeight - 2 * padding)/cellViewScal * K5SWScale - 2 * padding)/2;
+
         DrawBorderForView(imageView, 1.0, brownColor);
 
         
@@ -120,6 +138,59 @@
         make.right.mas_equalTo(lastCellView.mas_right).offset(padding);
 
     }];
+}
+
+-(NSString *)countNumAndChangeformat:(NSString *)str
+{
+    
+    NSMutableString *num=[NSMutableString stringWithString:str];
+    int temp=9-(int)num.length;
+    
+    if (temp) {
+        
+        for (int i=0; i<temp; i++) {
+            
+            [num insertString:@"0" atIndex:0];
+        }
+    }
+    
+    int count = 0;
+    long long int a = num.longLongValue;
+    while (a != 0)
+    {
+        count++;
+        a /= 10;
+    }
+    NSMutableString *string = [NSMutableString stringWithString:num];
+    
+    NSMutableString *newstring = [NSMutableString string];
+    while (count > 2) {
+        count -= 2;
+        NSRange rang = NSMakeRange(string.length - 2, 2);
+        NSString *str = [string substringWithRange:rang];
+        [newstring insertString:str atIndex:0];
+        [newstring insertString:@"/" atIndex:0];
+        [string deleteCharactersInRange:rang];
+    }
+    
+    [newstring insertString:string atIndex:0];
+    
+    [newstring insertString:@"/" atIndex:3];
+    
+    [newstring insertString:@"/" atIndex:0];
+    
+    [newstring stringByReplacingOccurrencesOfString:@"//" withString:@"/"];
+    
+    return newstring;
+    
+}
+
+- (NSString *)GetNowTimes
+{
+    NSDate* date = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[date timeIntervalSince1970];
+    NSString *timeString = [NSString stringWithFormat:@"%.0f",a];
+    return timeString;
 }
 
 
