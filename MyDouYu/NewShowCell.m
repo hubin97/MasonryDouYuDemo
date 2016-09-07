@@ -27,10 +27,10 @@
     
     //NSLog(@"newShowArr:%@",newShowArr);
     
-    for (NewShowModel *model in newShowArr)
-    {
-        NSLog(@"game_url;%@",model.game_url);
-    }
+//    for (NewShowModel *model in newShowArr)
+//    {
+//        NSLog(@"game_url;%@",model.game_url);
+//    }
     
     UIScrollView *newShowScrol = [[UIScrollView alloc]init];
     [self addSubview:newShowScrol];
@@ -49,7 +49,7 @@
         [newShowScrol addSubview:cellView];
         
         //cellview
-        DrawBorderForView(cellView, 1.0, lightGrayColor);
+        //DrawBorderForView(cellView, 1.0, lightGrayColor);
         
         //单个cell
         [cellView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -95,7 +95,7 @@
         imageView.layer.masksToBounds = YES;
         imageView.layer.cornerRadius  = ((cellHeight - 2 * padding)/cellViewScal * K5SWScale - 2 * padding)/2;
 
-        DrawBorderForView(imageView, 1.0, brownColor);
+        //DrawBorderForView(imageView, 1.0, brownColor);
 
         
         gamesLabel = [[UILabel alloc]init];
@@ -112,7 +112,7 @@
         //[gamesLabel sizeToFit];  // 没有效果??
         gamesLabel.font = [UIFont systemFontOfSize:15];
         
-        DrawBorderForView(gamesLabel, 1.0, brownColor);
+        //DrawBorderForView(gamesLabel, 1.0, brownColor);
 
         UILabel*lineLabel = [[UILabel alloc]init];
         [cellView addSubview:lineLabel];

@@ -49,6 +49,7 @@
 		1FF6E3AC1D4CAB8000F261ED /* TopAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3AB1D4CAB8000F261ED /* TopAdModel.m */; };
 		1FF6E3AF1D4CB6A600F261ED /* NewShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3AE1D4CB6A600F261ED /* NewShowModel.m */; };
 		1FF6E3B21D4CB7DB00F261ED /* NewShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3B11D4CB7DB00F261ED /* NewShowCell.m */; };
+		A1132B011D803B72002D1B0C /* ChanelData.m in Sources */ = {isa = PBXBuildFile; fileRef = A1132B001D803B72002D1B0C /* ChanelData.m */; };
 		B40B5CCFA95811EC6A27F4B2 /* libPods-MyDouYu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +151,8 @@
 		1FF6E3B11D4CB7DB00F261ED /* NewShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShowCell.m; sourceTree = "<group>"; };
 		256BC3C7559698A72174B308 /* Pods-MyDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.release.xcconfig"; sourceTree = "<group>"; };
 		71BA5C1CB50BFAC1A44FC666 /* Pods-MyDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.debug.xcconfig"; sourceTree = "<group>"; };
+		A1132AFF1D803B72002D1B0C /* ChanelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanelData.h; sourceTree = "<group>"; };
+		A1132B001D803B72002D1B0C /* ChanelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanelData.m; sourceTree = "<group>"; };
 		CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDouYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -369,6 +372,8 @@
 		1FB8842A1D740A0C00AF4B9F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1132AFF1D803B72002D1B0C /* ChanelData.h */,
+				A1132B001D803B72002D1B0C /* ChanelData.m */,
 				1FF6E3AD1D4CB6A600F261ED /* NewShowModel.h */,
 				1FF6E3AE1D4CB6A600F261ED /* NewShowModel.m */,
 				1FF6E3AA1D4CAB8000F261ED /* TopAdModel.h */,
@@ -684,6 +689,7 @@
 				1FF6E3AF1D4CB6A600F261ED /* NewShowModel.m in Sources */,
 				1F9DAE411D30A8610000F424 /* SettingSectionView.m in Sources */,
 				1FF6E3A41D4C8E1100F261ED /* TAAnimatedDotView.m in Sources */,
+				A1132B011D803B72002D1B0C /* ChanelData.m in Sources */,
 				1FF6E3A81D4C8E1100F261ED /* SDCycleScrollView.m in Sources */,
 				1F287AD01D39FF1700614EFD /* SettingSliderCell.m in Sources */,
 				041252E11D38E91D00C7AC47 /* ColumnModel.m in Sources */,

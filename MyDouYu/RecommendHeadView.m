@@ -24,6 +24,17 @@
         WS(ws);
         
         CGFloat padding = 5 * K5SWScale;
+        
+        //底部画一条1像素的的灰线
+        UILabel *line = [[UILabel alloc]init];
+        [self addSubview:line];
+        line.backgroundColor = [UIColor lightGrayColor];
+        
+        [line mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.equalTo(ws);
+            make.height.mas_equalTo(@1);
+        }];
+        
         //左,红色标记
         UIImageView *redflag = [[UIImageView alloc]init];
         [self addSubview:redflag];
@@ -38,9 +49,9 @@
         UIImageView *rightflag = [[UIImageView alloc]init];
         [self addSubview:rightflag];
         [rightflag mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.mas_equalTo(ws.mas_right).offset(- padding);
-            make.top.mas_equalTo(ws.mas_top).offset(padding);
-            make.bottom.mas_equalTo(ws.mas_bottom).offset( - padding);
+            make.right.mas_equalTo(ws.mas_right).offset(- padding * 1.5);
+            make.top.mas_equalTo(ws.mas_top).offset(padding * 1.5);
+            make.bottom.mas_equalTo(ws.mas_bottom).offset( - padding * 1.5);
             make.width.mas_equalTo(rightflag.mas_height);
         }];
         UILabel *moreLabel = [[UILabel alloc]init];
@@ -65,7 +76,7 @@
         }];
         //DrawBorderForView(self.sectionTitleLabel, 2, redColor);
         
-        redflag.backgroundColor = [UIColor redColor];
+        redflag.backgroundColor = TabBar_T_Color;
         redflag.layer.masksToBounds = YES;
         redflag.layer.cornerRadius = 10;
         
@@ -73,6 +84,7 @@
         moreLabel.hidden = self.isHiddenRightView;
         rightflag.image  = [UIImage imageNamed:@"btn_more"];
         moreLabel.text = @"更多";
+        moreLabel.font = [UIFont systemFontOfSize:14.0];
         moreLabel.textColor = [UIColor redColor];
         
         return self;
