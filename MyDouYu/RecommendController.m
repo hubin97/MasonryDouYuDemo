@@ -17,6 +17,7 @@
 
 #import "RecommendHeadView.h" //段头
 #import "NewShowCell.h" //第一个cell
+#import "RecommendCell.h"
 
 @interface RecommendController ()<SDCycleScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -94,7 +95,7 @@
     _tableView.delegate=self;
     _tableView.tableHeaderView=_headView;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"recommendCell"];
+    [_tableView registerClass:[RecommendCell class] forCellReuseIdentifier:@"recommendCell"];
     
 }
 
@@ -257,15 +258,38 @@
         if (!cell) {
             
             cell=[[NewShowCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identfire];
+            
+            [cell setContentViewWithArrays:_newDataArray];
         }
         
-        [cell setContentViewWithArrays:_newDataArray];
-        
+        //???
         return cell;
     }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recommendCell"];
+    static NSString *identfire2 = @"recommendCell";
     
+    RecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:identfire2];
+    
+    if (!cell) {
+        
+        cell=[[RecommendCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identfire2];
+    }
+    
+    //NSLog(@"_channelDatas[indexPath.section - 1]:%@",_channelDatas[indexPath.section - 1]);
+    /**
+     _channelDatas[indexPath.section - 1]:(
+     "\U5143\U6c14\U9886\U57df",
+     "homechannel_yqly",
+     (
+     "<ChanelData: 0x7fe59159b590>",
+     "<ChanelData: 0x7fe5917d8d90>",
+     "<ChanelData: 0x7fe5917d9290>",
+     "<ChanelData: 0x7fe5917d9770>"
+     )
+     )
+     */
+    [cell setContentViewWithModelArrs:_channelDatas[indexPath.section - 1][2]];
+
     return cell;
 }
 
@@ -319,7 +343,7 @@
     }
     else
     {
-        return 150;
+        return 220 *K5SWScale;
     }
     
 }
@@ -341,6 +365,33 @@
 {
     return 30 *K5SWScale;
 }
+
+#warning 取消Plain粘性效果,Grouped去掉头部和中间间隔
+/**
+ UITableViewStylePlain 有多段时 段头停留（自带效果）
+ UITableViewStyleGrouped  不会有以上效果
+ 
+ //文／Developer_峰（简书作者）
+ //原文链接：http://www.jianshu.com/p/3a5063993368
+ //著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。
+ 
+ */
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    
+    CGFloat sectionHeaderHeight = 30;
+    
+    if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+        
+        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+    } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+        
+        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+    }
+    
+}
+
+//
 /*
 #pragma mark - Navigation
 

@@ -50,6 +50,7 @@
 		1FF6E3AF1D4CB6A600F261ED /* NewShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3AE1D4CB6A600F261ED /* NewShowModel.m */; };
 		1FF6E3B21D4CB7DB00F261ED /* NewShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3B11D4CB7DB00F261ED /* NewShowCell.m */; };
 		A1132B011D803B72002D1B0C /* ChanelData.m in Sources */ = {isa = PBXBuildFile; fileRef = A1132B001D803B72002D1B0C /* ChanelData.m */; };
+		A1132B041D8049D2002D1B0C /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1132B031D8049D2002D1B0C /* RecommendCell.m */; };
 		B40B5CCFA95811EC6A27F4B2 /* libPods-MyDouYu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,8 @@
 		71BA5C1CB50BFAC1A44FC666 /* Pods-MyDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDouYu/Pods-MyDouYu.debug.xcconfig"; sourceTree = "<group>"; };
 		A1132AFF1D803B72002D1B0C /* ChanelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanelData.h; sourceTree = "<group>"; };
 		A1132B001D803B72002D1B0C /* ChanelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanelData.m; sourceTree = "<group>"; };
+		A1132B021D8049D2002D1B0C /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
+		A1132B031D8049D2002D1B0C /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
 		CA42C1F0FE9CC1BF91C156E3 /* libPods-MyDouYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDouYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -365,6 +368,8 @@
 				1FF6E3B11D4CB7DB00F261ED /* NewShowCell.m */,
 				1FB8842C1D740AF600AF4B9F /* RecommendHeadView.h */,
 				1FB8842D1D740AF600AF4B9F /* RecommendHeadView.m */,
+				A1132B021D8049D2002D1B0C /* RecommendCell.h */,
+				A1132B031D8049D2002D1B0C /* RecommendCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 				046418D81D1947F200D338CC /* BaseTabBarController.m in Sources */,
 				1FF6E3A31D4C8E1100F261ED /* TAAbstractDotView.m in Sources */,
 				1FA5761A1D1E625200136838 /* BaseViewController.m in Sources */,
+				A1132B041D8049D2002D1B0C /* RecommendCell.m in Sources */,
 				1F9DAE3B1D30A57B0000F424 /* SettingViewController.m in Sources */,
 				1F61572B1D1F80250060C874 /* OnlineCollectionCell.m in Sources */,
 				1FF6E3B21D4CB7DB00F261ED /* NewShowCell.m in Sources */,
