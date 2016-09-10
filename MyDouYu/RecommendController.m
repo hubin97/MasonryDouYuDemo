@@ -32,6 +32,8 @@
     NSMutableArray *_imageArray;
     NSMutableArray *_titleArray;
 
+    SDRotationLoopProgressView *_LoadView;
+
 }
 
 @property (nonatomic, strong) UICollectionView *onlineCollection;
@@ -57,11 +59,10 @@
     _titleArray = [NSMutableArray array];
     
     
-    [self loadChanelData];
-
+//    [self loadChanelData];
+//
     [self requestADData];
     [self loadNewShowData];
-    
     
     [self initHeadView];
     [self initTableView];
@@ -74,6 +75,9 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsCompact];
+    
+    [self loadChanelData];
+
 }
 
 -(void)initTableView
@@ -186,7 +190,7 @@
 
 -(void)loadChanelData
 {
-    //[self showLoadView];
+    [self showLoadView];
     
    
     NSDate* date = [NSDate dateWithTimeIntervalSinceNow:0];
@@ -215,6 +219,8 @@
             [_channelDatas addObject:arr];
         }
         
+        [self hidenLoadView];
+
         [_tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -226,6 +232,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)hidenLoadView
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        [_LoadView removeFromSuperview];
+        
+    }];
+}
+
+-(void)showLoadView
+{
+    _LoadView=[SDRotationLoopProgressView progressView];
+    
+    _LoadView.frame=CGRectMake(0, 0, 100*K5SWScale, 100*K5SWScale);
+    
+    _LoadView.center=self.view.center;
+    
+    [self.view addSubview: _LoadView ];
+    
 }
 
 #pragma mark - date source
@@ -259,10 +287,11 @@
             
             cell=[[NewShowCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identfire];
             
-            [cell setContentViewWithArrays:_newDataArray];
         }
         
-        //???
+        [cell setContentViewWithArrays:_newDataArray];
+
+        
         return cell;
     }
     

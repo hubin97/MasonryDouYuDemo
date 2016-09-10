@@ -38,6 +38,8 @@
 		1FB884341D740F2200AF4B9F /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB884301D740F2200AF4B9F /* 02.png */; };
 		1FB884351D740F2200AF4B9F /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB884311D740F2200AF4B9F /* 03.png */; };
 		1FB884361D740F2200AF4B9F /* 04.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB884321D740F2200AF4B9F /* 04.png */; };
+		1FEC0EC41D83A19000A788BE /* SDBaseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC0EC11D83A19000A788BE /* SDBaseProgressView.m */; };
+		1FEC0EC51D83A19000A788BE /* SDRotationLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC0EC31D83A19000A788BE /* SDRotationLoopProgressView.m */; };
 		1FF6E3A21D4C8E1100F261ED /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3921D4C8E1100F261ED /* NSData+SDDataCache.m */; };
 		1FF6E3A31D4C8E1100F261ED /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3951D4C8E1100F261ED /* TAAbstractDotView.m */; };
 		1FF6E3A41D4C8E1100F261ED /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E3971D4C8E1100F261ED /* TAAnimatedDotView.m */; };
@@ -128,6 +130,10 @@
 		1FB884301D740F2200AF4B9F /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		1FB884311D740F2200AF4B9F /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
 		1FB884321D740F2200AF4B9F /* 04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 04.png; sourceTree = "<group>"; };
+		1FEC0EC01D83A19000A788BE /* SDBaseProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseProgressView.h; sourceTree = "<group>"; };
+		1FEC0EC11D83A19000A788BE /* SDBaseProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseProgressView.m; sourceTree = "<group>"; };
+		1FEC0EC21D83A19000A788BE /* SDRotationLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRotationLoopProgressView.h; sourceTree = "<group>"; };
+		1FEC0EC31D83A19000A788BE /* SDRotationLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRotationLoopProgressView.m; sourceTree = "<group>"; };
 		1FF6E3911D4C8E1100F261ED /* NSData+SDDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SDDataCache.h"; sourceTree = "<group>"; };
 		1FF6E3921D4C8E1100F261ED /* NSData+SDDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SDDataCache.m"; sourceTree = "<group>"; };
 		1FF6E3941D4C8E1100F261ED /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -423,6 +429,18 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		1FEC0EBF1D83A19000A788BE /* CQLoadManger */ = {
+			isa = PBXGroup;
+			children = (
+				1FEC0EC01D83A19000A788BE /* SDBaseProgressView.h */,
+				1FEC0EC11D83A19000A788BE /* SDBaseProgressView.m */,
+				1FEC0EC21D83A19000A788BE /* SDRotationLoopProgressView.h */,
+				1FEC0EC31D83A19000A788BE /* SDRotationLoopProgressView.m */,
+			);
+			name = CQLoadManger;
+			path = 3th/CQLoadManger;
+			sourceTree = "<group>";
+		};
 		1FF6E38E1D4C8DB000F261ED /* Global */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +457,7 @@
 		1FF6E38F1D4C8DE000F261ED /* 3th */ = {
 			isa = PBXGroup;
 			children = (
+				1FEC0EBF1D83A19000A788BE /* CQLoadManger */,
 				1FF6E3901D4C8E1100F261ED /* SDCycleScrollView */,
 			);
 			name = 3th;
@@ -691,6 +710,7 @@
 				1FF6E3B21D4CB7DB00F261ED /* NewShowCell.m in Sources */,
 				1FA5760A1D1E2CFC00136838 /* OnlineViewController.m in Sources */,
 				046418A71D19446D00D338CC /* AppDelegate.m in Sources */,
+				1FEC0EC51D83A19000A788BE /* SDRotationLoopProgressView.m in Sources */,
 				1FF6E3A91D4C8E1100F261ED /* UIView+SDExtension.m in Sources */,
 				1FF6E3AF1D4CB6A600F261ED /* NewShowModel.m in Sources */,
 				1F9DAE411D30A8610000F424 /* SettingSectionView.m in Sources */,
@@ -701,6 +721,7 @@
 				041252E11D38E91D00C7AC47 /* ColumnModel.m in Sources */,
 				1FF6E3A61D4C8E1100F261ED /* TAPageControl.m in Sources */,
 				1F287ACD1D39D2EF00614EFD /* SettingSwitchCell.m in Sources */,
+				1FEC0EC41D83A19000A788BE /* SDBaseProgressView.m in Sources */,
 				1FA576041D1E2CDB00136838 /* RecommendController.m in Sources */,
 				1FB8842E1D740AF600AF4B9F /* RecommendHeadView.m in Sources */,
 				1F61572E1D1F834C0060C874 /* OnlineModel.m in Sources */,

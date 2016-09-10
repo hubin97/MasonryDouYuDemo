@@ -15,6 +15,7 @@
 {
     NSMutableArray *_dateSourceArray;
 //    int times; //记录上拉的次数
+    SDRotationLoopProgressView *_LoadView;
 }
 
 @property (nonatomic, strong) UICollectionView *columnCollection;
@@ -38,6 +39,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    
+    [self showLoadView];
     
     [self requestData];
     
@@ -66,6 +70,8 @@
         
         [self.columnCollection reloadData];
         
+        [self hidenLoadView];
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"task = %@; error = %@",task, error);
     }];
@@ -113,7 +119,26 @@
     }];
 }
 
+-(void)hidenLoadView
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        [_LoadView removeFromSuperview];
+        
+    }];
+}
 
+-(void)showLoadView
+{
+    _LoadView=[SDRotationLoopProgressView progressView];
+    
+    _LoadView.frame=CGRectMake(0, 0, 100*K5SWScale, 100*K5SWScale);
+    
+    _LoadView.center=self.view.center;
+    
+    [self.view addSubview: _LoadView ];
+    
+}
 
 #pragma mark -UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
